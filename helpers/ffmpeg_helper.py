@@ -95,7 +95,7 @@ async def MergeSub(filePath: str, subPath: str, user_id):
             subTrack += 1
     muxcmd.append(f"-metadata:s:s:{subTrack}")
     subTrack += 1
-    subTitle = f"Track {subTrack} - tg@yashoswalyo"
+    subTitle = f"Track {subTrack} - ArrowFilx"
     muxcmd.append(f"title={subTitle}")
     muxcmd.append("-c:v")
     muxcmd.append("copy")
@@ -147,7 +147,7 @@ def MergeSubNew(filePath: str, subPath: str, user_id, file_list):
         muxcmd.append("-map")
         muxcmd.append(f"{j}:s")
         muxcmd.append(f"-metadata:s:s:{subTrack}")
-        muxcmd.append(f"title=Track {subTrack+1} - tg@yashoswalyo")
+        muxcmd.append(f"title=Track {subTrack+1} - ArrowFlix")
         subTrack += 1
     muxcmd.append("-c:v")
     muxcmd.append("copy")
@@ -158,7 +158,7 @@ def MergeSubNew(filePath: str, subPath: str, user_id, file_list):
     muxcmd.append(f"./downloads/{str(user_id)}/[@yashoswalyo]_softmuxed_video.mkv")
     LOGGER.info("Sub muxing")
     subprocess.call(muxcmd)
-    return f"downloads/{str(user_id)}/[@yashoswalyo]_softmuxed_video.mkv"
+    return f"downloads/{str(user_id)}/[@ArrowFilx]_softmuxed_video.mkv"
 
 
 def MergeAudio(videoPath: str, files_list: list, user_id):
